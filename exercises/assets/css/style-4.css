@@ -283,7 +283,7 @@ section h3:nth-child(1) { margin-top: 0 }
 
 
 /* Web page */
-body {  font-family: var(--font-serif) }
+body {  font-family: "Merriweather", serif }
 
 /* Main heading */
 header h1 {
@@ -300,7 +300,7 @@ header h1 {
 
 /* Small heading */
 header h2 {
-    font-size: var(--fs-lg);
+    font-size: var(--fs-md);
     color: var(--blue-800);
     line-height: 1.4;
     text-align: center;
@@ -312,15 +312,15 @@ header h2 {
 h3 {
     font-size: var(--fs-xl);
     color: #000;
-    letter-spacing:-1px;
-    margin-top: 40px;
+    letter-spacing: 1px;
+    margin-top: 60px;
     margin-bottom: 12px;
     line-height: 1.2;
 }
 
 /* Text paragraphs */
 p {
-    font-size: var(--fs-md);
+    font-size: var(--fs-base);
     color: var(--slate-800);
     line-height: 1.6;
     margin-top: 0;
