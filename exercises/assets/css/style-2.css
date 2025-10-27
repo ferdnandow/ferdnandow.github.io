@@ -50,6 +50,12 @@ section > *:last-child { margin-bottom: 0 !important }
         padding-left: 20%
     }
 }
+
+/* === BEGIN NEGATIVE SPACING === */
+header, section { margin: 0 -10px; }
+@media (max-width: 767px) { header, section { margin: 0 -5px; } }
+@media (min-width: 768px) { header, section { margin: 0 -15px; } }
+/* === END NEGATIVE SPACING === */
                         
 /* Padding around content: mobiles */
 @media (max-width: 767px) {
