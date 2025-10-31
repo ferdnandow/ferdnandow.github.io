@@ -9,6 +9,8 @@ input, button, textarea, select { font: inherit }
 @media (max-width: 767px ) { body { text-rendering: optimizeSpeed } }
 @media (min-width: 768px ) { body { text-rendering: optimizeLegibility } }
 
+/*Fernando Pereira de Oliveira | Student ID: 76098 | style-4.css */
+
 /* ============ CUSTOM PROPERTIES ============  */
 
 :root {

@@ -8,6 +8,8 @@ img { width: 100%; height: auto }
 @media (max-width: 767px ) { body { text-rendering: optimizeSpeed } }
 @media (min-width: 768px ) { body { text-rendering: optimizeLegibility } }
 
+/*Fernando Pereira de Oliveira | Student ID: 76098 | style-2.css */
+
 
 /* ============ CUSTOM PROPERTIES ============  */
 

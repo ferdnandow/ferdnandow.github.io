@@ -13,6 +13,9 @@ img { width: 100%; height: auto; display: block }
 input, button, textarea, select { font: inherit }
 h1, h2, h3, h4, p, li { word-break: break-word; hyphens: auto }
 
+/*Fernando Pereira de Oliveira | Student ID: 76098 | hero-video.css/*
+
+
 /* ============ CUSTOM PROPERTIES ============  */
 
 :root {
