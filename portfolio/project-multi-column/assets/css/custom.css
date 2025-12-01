@@ -29,7 +29,7 @@
     /* Make the text transparent so the background shows */
     color: transparent;
 }
-.section-selector-4 { background-color: var(--yellow-300) }
+.section-selector-4 { background-color: var(--yellow-400) }
 .section-selector-4 { font-family: 'Inter', sans-serif; }
 .section-selector-4 h2 { font-size: var(--font-size-xxl) }
 .section-selector-4 h2 span { font-weight: 200 }
