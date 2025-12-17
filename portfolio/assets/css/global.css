@@ -263,3 +263,6 @@ header {
    background-image: linear-gradient(rgba(29,38,113,0.7),rgba(195,55,100,0.3));    
 }
 
+h1, h2, h3 {
+  font-family: "Neucha", cursive;
+}

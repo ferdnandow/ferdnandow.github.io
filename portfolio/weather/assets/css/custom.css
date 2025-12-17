@@ -47,14 +47,12 @@ footer.theme-dark {
   background-color: #0f172a;
 }
 
-.badge {
-    display: inline-block;
-    padding: 6px 14px;
-    font-size: 0.75rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    border-radius: 9px;
-    background: rgba(56, 189, 248, 0.15);
-    color: #7dd3fc;
+body {
+    margin: 0;
 }
 
+html,
+body {
+    min-height: 100%;
+    background-color: #0f172a;
+}
