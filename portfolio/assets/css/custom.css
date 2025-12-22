@@ -1,3 +1,7 @@
+/* ===================================================================
+   Fernando Oliveira | Student ID 76098 | Web Designer and Developer
+====================================================================== */
+
 /* ===== TYPOGRAPHY (ROBOTO ONLY) ===== */
 
 body {
@@ -24,7 +28,7 @@ header .col-text h2,
   line-height: 1.8;
 }
 
-/* ===== THEME COLORS (IDENTICAL TO MAIN) ===== */
+
 
 nav.theme-dark,
 nav.theme-dark ul.links-wrapper.active {
@@ -35,7 +39,7 @@ header.theme-dark {
   background-color: #0f172a;
 }
 
-/* ===== HEADER NAME GRADIENT ===== */
+
 
 header.theme-dark h1 {
   background: linear-gradient(
@@ -50,13 +54,13 @@ header.theme-dark h1 {
   -webkit-text-fill-color: transparent;
 }
 
-/* ===== SECTION BACKGROUND ===== */
+
 
 section.theme-dark {
   background-color: #0f172a;
 }
 
-/* ===== SECTION TITLES (PROJECT CARDS) ===== */
+
 
 section.theme-dark h3,
 .projects-title {
@@ -72,7 +76,7 @@ section.theme-dark h3,
   -webkit-text-fill-color: transparent;
 }
 
-/* ===== PROJECT DESCRIPTION TEXT ===== */
+
 
 section.theme-dark h3.projects-description {
   background: none;
@@ -81,13 +85,11 @@ section.theme-dark h3.projects-description {
   font-weight: 400;
 }
 
-/* ===== FOOTER ===== */
 
 footer.theme-dark {
   background-color: #0f172a;
 }
 
-/* ===== FOOTER NAME GRADIENT ===== */
 
 footer.theme-dark h2,
 footer.theme-dark h3,
@@ -105,9 +107,6 @@ footer.theme-dark .footer-name {
   -webkit-text-fill-color: transparent;
 }
 
-/* ===============================
-   FORCE DARK BACKGROUND (PROJECTS)
-================================ */
 
 /* garante o mesmo fundo da main */
 section.theme-dark {
@@ -125,10 +124,7 @@ section.theme-dark .row {
   background-color: transparent;
 }
 
-/* ===============================
-   FORCE MAIN DARK BACKGROUND
-   (PROJECTS SECTION – HARD FIX)
-================================ */
+
 
 .theme-dark {
   background-color: #0f172a !important;
@@ -138,10 +134,7 @@ section.theme-dark .row {
   background-color: transparent;
 }
 
-/* ===============================
-   ABSOLUTE DARK OVERLAY FIX
-   (LUNEVEDY SAFE METHOD)
-================================ */
+
 
 section.theme-dark {
   position: relative;
@@ -161,3 +154,4 @@ section.theme-dark > * {
   position: relative;
   z-index: 1;
 }
+

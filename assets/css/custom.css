@@ -1,6 +1,6 @@
-/* ===============================
-   NAME CUSTOMIZATION
-================================ */
+/* ===================================================================
+   Fernando Oliveira | Student ID 76098 | Web Designer and Developer
+====================================================================== */
 
 header.theme-dark h1 {
   background: linear-gradient(
@@ -17,14 +17,14 @@ header.theme-dark h1 {
   font-weight: 700;
 }
 
-/* ===============================
-   LUNEVEDY BUTTONS
-================================ */
+nav.theme-dark a:hover {
+  color: #f97316;
+}
 
 a.btn,
 a.btn-primary,
 a.btn-outline {
-  transition: color 0.25s ease, border-color 0.25s ease;
+  transition: color 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
 }
 
 a.btn:hover,
@@ -32,11 +32,9 @@ a.btn-primary:hover,
 a.btn-outline:hover {
   color: #f97316;
   border-color: #f97316;
+  background: rgba(249, 115, 22, 0.08);
 }
 
-/* ===============================
-   BADGES
-================================ */
 
 .badge {
   background: linear-gradient(
@@ -49,9 +47,7 @@ a.btn-outline:hover {
   color: #e0f2fe !important;
 }
 
-/* ===============================
-   PROJECT CARD TITLES
-================================ */
+
 
 section.theme-dark h3 {
   background: linear-gradient(
@@ -68,9 +64,7 @@ section.theme-dark h3 {
   font-weight: 600;
 }
 
-/* ===============================
-   RECENT PROJECTS TITLE
-================================ */
+
 
 .projects-title {
   background: linear-gradient(
@@ -94,9 +88,7 @@ section.theme-dark h3.projects-description {
   font-weight: 400;
 }
 
-/* ===============================
-   FOOTER NAME GRADIENT
-================================ */
+
 
 footer.theme-dark h2,
 footer.theme-dark h3,
@@ -116,4 +108,37 @@ footer.theme-dark .footer-name {
   font-weight: 600;
 }
 
+/* =========================================================
+   ORANGE HOVER EFFECTS FOR DARK THEME
+========================================================= */
+
+
+nav.theme-dark .links-wrapper a:hover,
+nav.theme-dark .links-wrapper a:focus {
+  color: #f97316 !important;
+}
+
+
+nav.theme-dark .links-wrapper li a:hover,
+nav.theme-dark .links-wrapper li a:focus {
+  color: #f97316 !important;
+}
+
+
+a.btn.btn-soft:hover,
+a.btn.btn-soft:focus,
+a.btn.btn-solid.btn-soft:hover,
+a.btn.btn-solid.btn-soft:focus,
+a.btn.btn-outline.btn-soft:hover,
+a.btn.btn-outline.btn-soft:focus {
+  color: #f97316 !important;
+  border-color: #f97316 !important;
+  background-color: rgba(249, 115, 22, 0.08) !important;
+}
+
+
+a.btn.btn-soft:hover i,
+a.btn.btn-soft:focus i {
+  color: #f97316 !important;
+}
 

@@ -1,6 +1,6 @@
-/* ===============================
-   TYPOGRAPHY (ROBOTO ONLY)
-================================ */
+/* ===================================================================
+   Fernando Oliveira | Student ID 76098 | Web Designer and Developer
+====================================================================== */
 
 body {
   font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
@@ -10,9 +10,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* ===============================
-   HEADINGS
-================================ */
 
 h1 {
   font-weight: 700;
@@ -30,9 +27,6 @@ header .col-text h2,
   line-height: 1.8;
 }
 
-/* ===============================
-   THEME DARK BASE
-================================ */
 
 nav.theme-dark,
 nav.theme-dark ul.links-wrapper.active,
@@ -42,9 +36,7 @@ footer.theme-dark {
   background-color: #0f172a;
 }
 
-/* ===============================
-   HERO NAME GRADIENT (H1)
-================================ */
+
 
 header.theme-dark h1 {
   background: linear-gradient(
@@ -59,9 +51,7 @@ header.theme-dark h1 {
   -webkit-text-fill-color: transparent;
 }
 
-/* ===============================
-   SECTION & CARD TITLES
-================================ */
+
 
 section.theme-dark .col-3 h3,
 .projects-title {
@@ -79,9 +69,6 @@ section.theme-dark .col-3 h3,
   font-weight: 600;
 }
 
-/* ===============================
-   PROJECT DESCRIPTION TEXT
-================================ */
 
 section.theme-dark h3.projects-description {
   background: none;
@@ -90,9 +77,7 @@ section.theme-dark h3.projects-description {
   font-weight: 400;
 }
 
-/* ===============================
-   BADGES
-================================ */
+
 
 .badge {
   background: linear-gradient(
@@ -105,9 +90,6 @@ section.theme-dark h3.projects-description {
   color: #e0f2fe;
 }
 
-/* ===============================
-   BUTTON HOVER EFFECTS
-================================ */
 
 a.btn,
 a.btn-primary,
@@ -122,9 +104,7 @@ a.btn-outline:hover {
   border-color: #f97316;
 }
 
-/* ===============================
-   FOOTER TEXT GRADIENT
-================================ */
+
 
 footer.theme-dark h2,
 footer.theme-dark h3 {
@@ -142,10 +122,7 @@ footer.theme-dark h3 {
   font-weight: 600;
 }
 
-/* ===============================
-   BOOK TITLES (STORE) – GRADIENT LIKE PROJECT TITLES
-   Only affects the H3 titles inside the store grid
-================================ */
+
 
 section.section-selector-1 .col-4 > h3 {
   background: linear-gradient(
