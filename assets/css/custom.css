@@ -142,3 +142,13 @@ a.btn.btn-soft:focus i {
   color: #f97316 !important;
 }
 
+.flex-cols-3 figure {
+  height: 220px;
+  overflow: hidden;
+}
+
+.flex-cols-3 figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
