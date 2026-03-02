@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .color-red {
+           background-color: "write";
+        }
+    </style>
+    
+<body>
+
+    <h1 id="myHeading">My Heading here</h1>
+
+    <p id="myParagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed obcaecati asperiores ut tempora, ipsum ipsa deleniti quo sapiente vel beatae, officia eum dolorum nisi nulla ratione vitae voluptatum perferendis autem..</p>
+
+    <button onclick="changeHeading()">Change Heading</button>
+
+    <script>
+
+        function changeHeading (){
+            // JavaScript // This is html document object model
+            let varHeading = document.getElementById("myHeading");
+            varHeading.innerText;
+            console.log(`Before update: ${varHeading.innerText}`);
+            varHeading.innerText = "New Heading Updated";
+
+        }
+            // JavaScript // This is html document object model
+        function changeParagraph (){
+            let varParagraph = document.getElementById("myParagraph");
+            varParagraph.innerText;
+            console.log(`Before update: ${varParagraph.innerText}`);
+            varParagraph.innerText = "New Paragraph Updated";
+        }
+    </script>
+
+</body>
+</html>

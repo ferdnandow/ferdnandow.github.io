@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .color-red {
+           background-color: whitesmoke;    
+            color: red;
+        }
+        button {
+            color: black;
+            background-color: greenyellow;
+            padding: 6px 12px;
+            border-radius: 4px;
+            border: solid 1px green;
+        }
+        input{
+            padding: 8px;
+            border: 1px solid gray;
+            border-radius: 4px;
+            background-color: lightskyblue;
+        }
+        input.input-error {
+            border: 2px solid red;
+            padding: 6px 12px;
+            background-color: lightcoral;
+            color: white;
+        }
+
+    </style>
+
+</head>
+    
+<body>
+
+    <h1 id="myHeading">My Heading here</h1>
+
+    <p id="myParagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed obcaecati asperiores ut tempora, ipsum ipsa deleniti quo sapiente vel beatae, officia eum dolorum nisi nulla ratione vitae voluptatum perferendis autem..</p>
+
+    <button onclick="changeHeading()">Change Heading</button>
+    <button onclick="changeParagraph()">Change Paragraph</button>
+    <br><br>
+    <input type="text" id="userName" placeholder="Enter your name">
+    <br><br>
+    <button onclick="showName()">Submit</button>
+
+
+    <script>
+
+        function changeHeading (){
+            // JavaScript // This is html document object model
+            let varHeading = document.getElementById("myHeading");
+            varHeading.innerText;
+            console.log(`Before update: ${varHeading.innerText}`);
+            varHeading.innerText = "New Heading Updated";
+
+        }
+
+        function changeParagraph() {
+            let varParagraph = document.getElementById("myParagraph");
+            varParagraph.innerText = "Paragraph Updated";
+            varParagraph.classList.add("color-red");
+        }
+
+function showName() {
+    let input = document.getElementById('userName');
+    let name = input.value.trim();
+
+    // sempre volta ao normal quando clica
+    input.classList.remove("input-error");
+
+    if (name === "") {
+        input.classList.add("input-error"); // fica preto só no submit
+        console.log("Please enter your name.");
+    } else {
+        console.log(`Hello, ${name}!`);
+    }
+}
+
+    // Declaring and populating an object
+const objUser = {
+    firstName: "Luis", // string
+    lastName: "Martinez", // string
+    age: 32, // number
+    isActive: true // boolean
+};
+
+    console.log(objUser);
+
+    // === Displaying a property inside an object by its key ===
+
+    console.log(`User's first name: ${objUser.firstName}`);
+    console.log(`User's last name:  ${objUser.lastName}`);
+    console.log(`User's age: ${objUser.age}`);
+    console.log(`User active?: ${objUser.isActive}`);
+
+    // === Working with the properties of an object ===
+
+    // Declaring and populating new object
+    const objCar = {
+        make: "Toyota",
+        model: "Camry",
+        year: 2023,
+    };
+    console.log("Original object"); 
+    console.log(objCar);
+
+    // Adding two new properties (key-value) pairs to the object
+    objCar.color = "Blue";   
+    objCar.isElectric = false;  
+    console.log("Added two new properties"); 
+    console.log(objCar);
+
+    // Deleting a property from an object
+    delete objCar.isElectric;
+    console.log("Removed a property"); 
+    console.log(objCar);
+
+    // Updating the value within two properties
+    objCar.color = "Red";   
+    objCar.year = 2012;   
+    console.log("Updated two property values"); 
+    console.log(objCar);
+
+    // === Creating an empty object and later adding keys-values ===
+
+    // Create empty object
+    const objPerson = {};
+    console.log(objPerson.length === 0); // true
+                    
+    // Add keys and values to empty object
+    objPerson.firstName = "Emma";
+    objPerson.lastName = "Smith";
+    console.log(objPerson.length === 0); // false
+
+    console.log(objPerson);
+    // {firstName: "Emma", lastName: "Smith"}
+
+    // === Object destructuring ===
+
+    // Without destructuring
+    const userFirstName = objUser.firstName;
+    const userLastName = objUser.lastName;
+
+    // With destructuring
+    const { firstName, lastName } = objUser;
+    console.log(`User name: ${firstName} ${lastName}`);
+
+    // Destructuring with different variable names
+    const { firstName: userFirst, lastName: userLast } = objUser;
+    console.log(`${userFirst} ${userLast}`);
+
+    
+    // Declaring an array with items on separate lines and a trailing comma
+    const arrUserFirstNames = [
+    "Camille",
+    "Emma",
+    "Gabriel",
+    "Romy",
+    ];
+
+        // === Outputting array items by index position ===
+
+    console.log(`First item of arrUserFirstNames array: ${arrUserFirstNames[0]}`);
+    console.log(`First item of arrPrices array: ${arrPrices[1]}`);
+    console.log(`First item of arrCars array: ${arrCars[2]}`);
+    console.log(`First item of arrUserIDs array: ${arrUserIDs[3]}`);
+
+    // === Array length property ===
+    console.log(`Number of items in arrUserFirstNames: ${arrUserFirstNames.length}`);
+    // 4
+    console.log(`Number of items in arrPrices: ${arrPrices.length}`);
+    // 4
+
+    
+
+    </script>
+
+</body>
+</html>

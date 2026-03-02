@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- External JavaScript file -->
+    <script defer src="script.js"></script>
+
+</head>
+<body>
+    <h1>Heading</h1>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati enim fugit facilis voluptatem quam alias dolorem, ratione similique? Placeat voluptatum, est voluptatem facere in sint inventore aperiam dolorum quod.</p>
+
+    <!-- Internal JavaScript file -->
+
+    <script>
+        console.log("Hello from web page.");
+
+        // Declaring (creating and naming) variables in JavaScript
+        let userFirstName; // Declares a variable named userFirstName
+        let taxRate;       // Declares a variable named taxRate
+
+        // Declaring variables and then assigning values to them
+        let userName; // Declare a variable
+        userName = "Fernando Oliveira"; // Assign value to the variable
+        console.log(userName); // Outputs: Fernando Oliveira
+
+        let userCountry; // Declare a variable
+        userCountry = "Ireland"; // Assign value to the variable
+        console.log(userCountry); // Outputs: Ireland
+
+        // Working with string variables
+        const firstName = "Peter";
+        let lastName = 'Smith';
+        let streetAddress = "42 Green Avenue";
+        console.log(firstName); // Outputs: Peter
+        console.log(lastName); // Outputs: Smith
+        console.log(streetAddress); // Outputs: 42 Green Avenue
+
+        // Display on one line. Use , character to separate variables
+        console.log(firstName, lastName, streetAddress);
+        // Outputs: Peter Smith 42 Green Avenue
+
+        // Working with numeric variables	
+        let orderQty = 42;
+        let productPrice = 9.99;
+
+        // Mixing literals and variables
+        const customerFirstName = "Fernando Oliveira";
+        const accBalance = 10;
+		
+        // Using template literals
+        console.log(`Hi ${customerFirstName}. Your balance is €${accBalance}.`); 
+        // Outputs: Hi Fernando Oliveira. Your balance is €10.
+
+        console.log (`Order quantity: ${orderQty}`);
+
+        // Checking the data type of a variable
+        
+        let someVar = ""; // declare empty variable 
+
+        someVar = "12"; // assign string to variable
+        console.log(`Data type of someVar: ${typeof someVar}`); // Outputs: string 
+
+        someVar = 12;  // assign number to variable
+        console.log(`Data type of someVar: ${typeof someVar}`); // Outputs: number 
+
+        someVar = "12"; // assign string to variable
+        console.log(`Data type of someVar: ${typeof someVar}`); // Outputs: string - again!
+
+        someVar = true; // assign boolean to variable
+        console.log(`Data type of someVar: ${typeof someVar}`); // Outputs: boolean
+
+        someVar = null; // assign null to variable
+        console.log(`Data type of someVar: ${typeof someVar}`); // Outputs: object (an error in JavaScript)
+        someVar = 24; // assign number to variable
+        console.log(`Data type of someVar: ${typeof someVar}`); // Outputs: number - again!
+
+        
+        // Using [] notation to access position of characters within string
+        let myStr6 = "Hello, World!";
+        console.log(`Position [0]: ${myStr6[0]};`)   // H
+        console.log(`Position [5]: ${myStr6[5]};`)   // ,
+        console.log(`Position [6]: ${myStr6[6]};`)   // whitespace
+        console.log(`Position [7]: ${myStr6[7]};`)   // W
+        console.log(`Position [12]: ${myStr6[12]};`) // !
+
+        // ======== CHECKING STRING CONTENT ========
+        // String length  
+        console.log(myStr6.length); // 13
+
+        // ======== CONCATENATING STRINGS ========
+       
+        // Joining strings with template literals
+        let txtFirstName = "John";
+        let txtLastName = "Lennon";
+        let txtFullName = `${txtFirstName} ${txtLastName}`; 
+        console.log(`Full name: ${txtFullName}`);  // John Lennon
+
+        // Compound assignment operator +=
+        let greeting = "Hello";
+        greeting += " there";  // Hello there
+        greeting += "!";       // Hello there!
+        console.log(greeting);
+                
+        let story = "Once upon a time";
+        story += " there was a programmer";
+        story += " who loved to code";
+        story += " and debug all day long.";
+        console.log(story)
+
+        // ======== ASSIGN NUMBERS TO VARIABLES ========
+        const myVar1 =  1234;    // JavaScript treats myVar1 as a number
+        const myVar2 = "1234";;  // JavaScript treats myVar2 as a string
+        const myVar3 = '1234';   // JavaScript treats myVar3 as a string
+        const myVar4 = `1234`;   // JavaScript treats myVar4 as a string
+        console.log(`${myStr1} ${myStr2} ${myStr3} ${myStr4}`); // 1234 1234 1234 1234
+
+    </script>		
+
+    
+</body>
+</html>

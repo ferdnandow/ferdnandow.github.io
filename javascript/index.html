@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The 80/20 Guide to Core JavaScript Concepts</title>
+    <style>
+        /* ADDED: Defining the variables used in your script */
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b0b0;
+            --accent-color: #bb86fc;
+            --border-color: #333;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            padding: 40px 20px;
+        }
+
+        header {
+            border-bottom: 2px solid var(--accent-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            color: var(--accent-color);
+        }
+
+        .intro {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        section {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border: 1px solid var(--border-color);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-top: 0;
+            color: var(--accent-color);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: var(--text-primary);
+            margin-top: 25px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #252525;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: #333;
+            color: var(--accent-color);
+        }
+
+        code {
+            background-color: #2c2c2c;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+            color: #ff79c6;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: var(--border-color);
+            margin: 40px 0;
+        }
+
+        /* Video Styles */
+        .video-container {
+            width: 100%;
+            border-radius: 4px;
+            overflow: hidden;
+            background-color: #000;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Audio Styles */
+        audio {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.5rem; }
+            section { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>The 80/20 Guide to Core JavaScript Concepts</h1>
+            <p class="intro">Distilling the 20% of knowledge that delivers 80% of the understanding.</p>
+        </header>
+
+        <section class="image-section">
+            <h2>Visualizing the Concept</h2>
+            <div class="image-container">
+                <img src="assets/img/guide.png" alt="Diagram showing the 80/20 rule applied to JavaScript concepts" style="width: 100%; height: auto; display: block;">
+            </div>
+            <p class="caption" style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 10px; font-style: italic; text-align: center;">The 80/20 Rule: Focusing on the core 20% of JavaScript that powers 80% of functionality.</p>
+        </section>
+
+        <p>This document provides a high-efficiency summary of the foundational concepts in JavaScript for professionals who need a rapid, conceptual grasp of the subject. It focuses squarely on the core logic and strategic principles that underpin modern web scripting.</p>
+
+        <hr>
+
+        <section class="video-section">
+            <h2>Video Tutorial</h2>
+            <div class="video-container">
+                <video controls poster="thumbnail.jpg">
+                    <source src="assets/img/JavaScript.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
+        <section class="audio-section">
+            <h2>Audio Summary</h2>
+            <p>Listen to the "JavaScript Podcast" for a summary of these topics:</p>
+            <audio controls>
+                <source src="assets/img/javascript-podcast.m4a" type="audio/mp4">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+
+        <section>
+            <h2>1. Integrating JavaScript: Efficiency Principles</h2>
+            <p>The method used to add JavaScript directly impacts user experience through page load performance.</p>
+            <ul>
+                <li><strong>Code Separation:</strong> Keeps HTML and logic distinct.</li>
+                <li><strong>Maintainability:</strong> Simplifies updates and debugging.</li>
+                <li><strong>Performance Caching:</strong> External files can be stored in the browser cache to speed up subsequent visits.</li>
+            </ul>
+            <p>Modern standards favor placing <code>&lt;script&gt;</code> tags in the <code>&lt;head&gt;</code> with the <code>defer</code> attribute to ensure non-blocking script loading.</p>
+        </section>
+
+        <section>
+            <h2>2. Variables and Data Types</h2>
+            <p>Variables are named containers for managing data. The choice between <code>let</code> and <code>const</code> signals intended behavior:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Keyword</th>
+                        <th>Core Principle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>let</code></td>
+                        <td>For values expected to be updated or reassigned.</td>
+                    </tr>
+                    <tr>
+                        <td><code>const</code></td>
+                        <td>For fixed values that should not change.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Core Data Types:</h3>
+            <ul>
+                <li><strong>String:</strong> Sequences of characters in quotes.</li>
+                <li><strong>Number:</strong> Numerical values (integers or decimals).</li>
+                <li><strong>Boolean:</strong> Logical <code>true</code> or <code>false</code>.</li>
+                <li><strong>Null:</strong> Intentional assignment of "no value".</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. Working with Numbers</h2>
+            <p>JavaScript uses standard operators for calculation: <code>+</code>, <code>-</code>, <code>*</code>, and <code>/</code>.</p>
+            <p><strong>Operator Precedence:</strong> JavaScript follows standard mathematical rules (Division and Multiplication first, then Addition and Subtraction). Use parentheses <code>()</code> to force a specific sequence.</p>
+        </section>
+
+        <section>
+            <h2>4. Manipulating Text</h2>
+            <p>Strings use <strong>zero-based indexing</strong>, where the first character starts at index 0.</p>
+            <h3>Essential Methods:</h3>
+            <ul>
+                <li><code>.length</code>: Reveals character count.</li>
+                <li><code>.trim()</code>: Removes whitespace from ends.</li>
+                <li><code>.slice()</code>: Extracts a substring.</li>
+                <li><code>.replace()</code>: Swaps character sequences.</li>
+            </ul>
+            <p><em>Note:</em> String methods are <strong>immutable</strong>; they return new strings rather than changing the original.</p>
+        </section>
+
+        <section>
+            <h2>5. Dynamic Output</h2>
+            <p><strong>Template Literals:</strong> Enclosed in backticks (<code>`</code>), these allow variables to be embedded directly using <code>${variableName}</code>. This is the modern, preferred alternative to concatenation for readability and maintenance.</p>
+        </section>
+
+        <footer>
+            <p style="text-align: center; color: var(--text-secondary); font-size: 0.9rem;">
+                © 2024 Core JavaScript Guide | Based on Brendan Munnelly Tutorials
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

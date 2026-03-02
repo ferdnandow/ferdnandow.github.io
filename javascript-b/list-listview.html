@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product ListView</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        accentBlue: '#3b82f6'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gray-900 text-gray-200 min-h-screen flex items-center justify-center">
+
+    <div class="w-full max-w-4xl p-4">
+        <h1 class="text-3xl font-bold mb-6 text-center text-white">
+            Product List
+        </h1>
+
+        <!-- Column Labels (Desktop Only) -->
+        <div class="hidden md:grid grid-cols-5 gap-4 px-4 py-2 text-gray-400 border-b border-gray-700">
+            <span>ID</span>
+            <span>Name</span>
+            <span>Price</span>
+            <span>Availability</span>
+            <span>Action</span>
+        </div>
+
+        <!-- List Container -->
+        <div id="productList" class="space-y-3 mt-4">
+            <!-- JS injects rows here -->
+        </div>  
+    </div>
+
+    <script src="list-listview.js"></script>
+</body>
+</html>

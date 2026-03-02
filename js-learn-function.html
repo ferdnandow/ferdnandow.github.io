@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions Guide</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --surface-color: #1e1e1e;
+            --primary-accent: #00adb5;
+            --text-main: #eeeeee;
+            --text-dim: #b3b3b3;
+            --border-color: #333333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 95%;
+            padding: 40px 20px;
+        }
+
+        header {
+            border-bottom: 2px solid var(--primary-accent);
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary-accent);
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: var(--primary-accent);
+            margin-top: 40px;
+            border-left: 4px solid var(--primary-accent);
+            padding-left: 15px;
+        }
+
+        p {
+            color: var(--text-dim);
+            margin-bottom: 20px;
+        }
+
+        section {
+            background-color: var(--surface-color);
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #252525;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 15px;
+            border: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: var(--primary-accent);
+            color: #000;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #2a2a2a;
+        }
+
+        .highlight {
+            color: var(--primary-accent);
+            font-weight: bold;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: var(--border-color);
+            margin: 40px 0;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-dim);
+            margin-top: 50px;
+            padding-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>A Practical Guide to JavaScript Functions</h1>
+        <p class="highlight">Declarations vs. Expressions</p>
+
+        <img src="assets/img/js-functions.png" alt="JavaScript Functions Illustration" style="width:100%; border-radius:8px; margin-top:20px;">
+img {
+
+    
+}
+
+
+    </header>
+
+    <article>
+        <section>
+            <h2>Introduction: The Building Blocks of Code</h2>
+            <p>Functions are the fundamental building blocks of any programming language. You can think of a function as a reusable sub-program—a block of code designed to perform a particular task. By organizing code into functions, programmers can write a task's logic once and then call upon it as many times as needed, creating more efficient and organized programs.</p>
+            <p>The purpose of this guide is to clearly explain the two primary ways to create functions in JavaScript: <strong>function declarations</strong> and <strong>function expressions</strong> (often called anonymous functions). We will analyze their structures, behaviors, and the crucial differences between them.</p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>1. The Standard Approach: Function Declarations</h2>
+            <p>Function declarations are the traditional and most straightforward method for creating reusable blocks of code in JavaScript. They serve as a foundational concept for structured programming, allowing developers to define a named procedure that can be invoked from anywhere in its scope.</p>
+            <p>A function declaration is defined by the <code>function</code> keyword, followed by a mandatory, unique name. As a best practice, this name should be an imperative verb (an action word) that clearly describes what the function does, such as <em>calculateTotal</em> or <em>displayMessage</em>.</p>
+            <p>A key characteristic of function declarations is <strong>hoisting</strong>. In JavaScript, function declarations are "hoisted" to the top of their scope when the program is compiled. The practical benefit of this is that developers can call a function before it physically appears in the code.</p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>2. The Flexible Alternative: Anonymous Functions</h2>
+            <p>An alternative to the traditional declaration is the anonymous function, also known as a <strong>function expression</strong>. The strategic value of this approach lies in its flexibility; it allows a function to be treated like any other value—it can be stored in a variable, passed into another function as an argument, or even returned as output.</p>
+            <p>The most critical difference in their behavior is that <strong>anonymous functions are not hoisted</strong>. This has a direct practical implication: an anonymous function can only be called after it has been defined in the code. This enforces a more predictable, linear, top-to-bottom code flow.</p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>3. At a Glance: Comparison</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Function Declaration</th>
+                        <th>Anonymous Function (Expression)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Definition</strong></td>
+                        <td>Begins with function keyword + name.</td>
+                        <td>Reference assigned to a variable.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Naming</strong></td>
+                        <td>Always mandatory and unique.</td>
+                        <td>Invoked using the variable name.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Hoisting</strong></td>
+                        <td>Yes</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td><strong>When to Call</strong></td>
+                        <td>Before or after definition.</td>
+                        <td>Only after definition.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>4. Core Principles and Conclusion</h2>
+            <p><strong>The Purpose of Functions:</strong> Reusability is the primary advantage—write once, run many times.</p>
+            <p><strong>The Hoisting Divide:</strong> Declarations are "always-on," while expressions follow a strict order.</p>
+            <p><strong>Handling Data:</strong> JavaScript is flexible with arguments. If too few are provided, missing parameters become <code>undefined</code>. Using default values is a crucial defensive technique to prevent program "freezing."</p>
+            <p><strong>Scope:</strong> Global variables are accessible everywhere; local variables (inside functions) prevent interference between different parts of the program.</p>
+            <p>In summary, understanding these distinct behaviors is a cornerstone of writing clean, predictable, and effective JavaScript.</p>
+        </section>
+    </article>
+
+    <footer>
+        &copy; 2026 JavaScript Fundamentals Guide
+    </footer>
+</div>
+
+</body>
+</html>

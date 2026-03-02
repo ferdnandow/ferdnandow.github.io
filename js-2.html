@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+    .newHeadingClass { 
+    background-color: blue; 
+    color: pink; 
+    padding: 10px; 
+    border-radius: 5px
+    }
+
+    .messageOrderPlaced { 
+    background-color: lightgreen; 
+    color: #000; 
+    border: solid 1px green;
+    padding: 10px; 
+    border-radius: 5px
+}
+
+    </style>
+
+</head>
+<body>
+
+    <h1 id="bigHeading">Some heading</h1> 
+
+    <p id="paraText"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam modi tempore vero amet dolore consequuntur labore fuga quod quo voluptate, harum sint expedita, earum molestias eaque? Quam obcaecati magnam nulla. </p>
+
+    <div id="myDIV">Sample Text</div>
+    <button id="turnGreen" onclick="turnGreen()">Turn Green on Click</button>
+    <button id="resetColour" onmouseover="resetColour()">Reset Colour</button>
+
+    <!-- Button linked to event handler function -->
+    <button id="btn_1" onclick="changeHeading()">Update h1</button>
+    <button id="btn_2" onclick="restoreHeading()">Restore h1</button>  
+    <button id="btn_3" onclick="doParaText()">Update para text</button>  
+    <button id="btn_4" onclick="placeOrder()">Order product</button>
+    
+    <script>
+        //JavaScript code goes here
+
+
+        let firstName = "Fernando";''
+        let lastName = "Oliveira";
+        let singerName = "Xandy de Pilares";
+        console.log(`Hi! My name is ${firstName} ${lastName} and my favourite singer is ${singerName}.`);
+
+        // ======== FUNCTION DECLARATIONS ========
+
+        // Function declaration	
+        function displayGreeting() {
+        console.log('Hello, world!');
+        }
+        // Outputs 'Hello, world!' to Console when called
+
+        displayGreeting();
+
+        // Function declaration with parameter
+        function showNumber(num) {
+        console.log(`Number passed as parameter is: ${num}`);
+        }
+
+        // Function call with argument
+        showNumber(35); 
+
+        // Function declaration with two parameters
+        function addTwoNumbers(num1, num2) {
+            // Outputs the sum of two numbers
+            console.log(`Sum is: ${num1 + num2}`); 
+            return (num1 + num2);
+        }
+
+        // Function call with two arguments
+        let result = addTwoNumbers(10, 25);
+        console.log(`Result stored in variable is: ${result}`);
+
+        // Create a function that calculates the area of a rectangle. The fucn
+
+        function calcArea (x,y) {
+             return (x * y);
+        };
+
+        let answer = calcArea (5, 8);
+        console.log (`Area of rectangle is: ${answer}`);
+
+    // Add CSS class to the heading
+    // Function to change the heading properties and content
+    function changeHeading() {
+    // Get the HTML heading element from the web page
+    let bigHeading = document.getElementById('bigHeading');
+    // Add a new CSS class to the element
+    bigHeading.classList.add('newHeadingClass');
+    // Update HTML element content
+    bigHeading.innerText = 'New heading text from JS';
+    // Update the HTML element content with HTML tag included
+    bigHeading.innerHTML = 'New heading text in <i>italics</i> from JS';
+}
+    
+    // Function to restore the heading to its original state
+    function restoreHeading() {
+    // Get the HTML heading element from the web page
+    let bigHeading = document.getElementById('bigHeading');
+    // Remove the CSS class from the element
+    bigHeading.classList.remove('newHeadingClass');
+    // Replace the new HTML element content with the original content
+    bigHeading.innerText = 'Big heading here';
+}
+
+        // Function to change the heading properties and content
+        function changeHeading() {
+        // Get the HTML heading element from the web page
+        let bigHeading = document.getElementById('bigHeading');
+        // Update HTML element styles directly;
+        bigHeading.style.backgroundColor = 'silver';
+        bigHeading.style.color = 'white';
+        // Update HTML element content
+        bigHeading.innerText = 'New heading text from JS';
+        // Update the HTML element content with HTML tag included
+        bigHeading.innerHTML = 'New heading text in <i>italics</i> from JS';
+    }
+
+        // Function to change the paragraph content
+        function doParaText() {
+        // Get the HTML first paragraph of text from the web page
+        let strText = document.getElementById('paraText');
+        // Update its content
+        strText.innerText = 'New paragraph text from JS.';
+    }
+
+        // Function to add a new message to the page
+        function placeOrder() {
+        // Create a new HTML element
+        let newMessage = document.createElement("div");
+        // Add a CSS class to the new element
+        newMessage.classList.add("messageOrderPlaced");
+        // Add content to the new element
+        newMessage.innerHTML = "Your order has been placed. <b>Thank you</b>";
+        // Add the new element to the web page
+        document.body.appendChild(newMessage);
+}
+
+        function turnGreen(){
+            let var1 = document.getElementById("myDIV");
+            var1.style.backgroundColor = "green";
+        }
+
+        function resetColour(){
+            let var1 = document.getElementById("myDIV");
+            var1.style.backgroundColor = "yellow";
+        }
+
+    // ======== ANONYMOUS FUNCTIONS ========
+
+    // Anonymous function	
+    const showGreeting = function () {
+    console.log('Hello from anonymous function');
+    }
+
+    showGreeting(); // Outputs 'Hello from anonymous function' to console
+
+    
+// Anonymous function with two parameters that returns a value
+const sumNumbers = function(a, b) {
+    return a + b;
+};
+
+    // Call the function with two arguments
+    let resultSum = sumNumbers(5, 3); 
+    // Outputs result to console
+    console.log(`Returned result: ${resultSum}`);
+
+
+    // Anonymous function with two parameters that returns a value
+    const multiplyNumbers = function(x, y) {
+        return x * y;
+    };
+
+    // Call the function with two arguments
+    let resultMultiply = multiplyNumbers(5, 3);
+    // Outputs result to console
+    console.log(`Returned result: ${resultMultiply}`);
+
+    // Immediately-invoked anonymous function
+    (function() {
+        console.log("Hello from immediately-invoked anonymous function");
+    })();
+
+    </script>   
+
+</body>
+</html>
